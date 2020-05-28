@@ -1,33 +1,17 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import styled from "styled-components";
+import DragNDrop from "./components/DragNDrop";
 
-const DaragNDrop = styled.div`
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: repeat(auto-fill, 300px);
-`;
-
-const DndGroup = styled.div`
-  background: red;
-`;
-
-const DnDItem = styled.div`
-  text-align: center;
-`;
+const data = [
+  { title: "group 1", items: ["1", "2", "3"] },
+  { title: "group 2", items: ["4", "5"] },
+];
 
 function App() {
   return (
     <div className="App">
-      <DaragNDrop>
-        <DndGroup>
-          <DnDItem>
-            <p>ITEM</p>
-          </DnDItem>
-        </DndGroup>
-      </DaragNDrop>
+      <DragNDrop data={data} />
     </div>
   );
 }
